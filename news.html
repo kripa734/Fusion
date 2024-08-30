@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fission Hub - News</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav>
+            <div class="logo"><a href="index.html">Fission Hub</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero news-hero">
+            <div class="hero-content">
+                <h1>Fission Energy News</h1>
+                <p>Stay updated with the latest news and developments in the world of nuclear fission energy.</p>
+            </div>
+        </section>
+
+        <section class="full-width-section">
+            <h2>Latest News</h2>
+            <div id="news-container">
+                <!-- News articles will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section class="full-width-section">
+            <h2>News Archive</h2>
+            <ul class="news-archive-list">
+                <li><a href="#">Nuclear Energy in 2024: What to Expect</a></li>
+                <li><a href="#">Breakthroughs in Reactor Technology</a></li>
+                <li><a href="#">Global Impact of Nuclear Energy Policies</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fission Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to fetch and display the latest news
+        function fetchNews() {
+            fetch('https://newsapi.org/v2/everything?q=nuclear+fission&apiKey=YOUR_NEWS_API_KEY')
+                .then(response => response.json())
+                .then(data => {
+                    let newsHtml = '';
+                    data.articles.forEach(article => {
+                        newsHtml += `<div class="news-item">
+                            <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
+                            <p>${article.description}</p>
+                        </div>`;
+                    });
+                    document.getElementById('news-container').innerHTML = newsHtml;
+                });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', fetchNews);
+    </script>
+</body>
+
+</html>
