@@ -34,16 +34,27 @@
         <section class="full-width-section">
             <h2>Latest News</h2>
             <div id="news-container">
-                <!-- News articles will be dynamically inserted here -->
+                <div class="news-item">
+                    <h3><a href="https://www.iaea.org/newscenter/news/nuclear-power-essential-to-meeting-climate-goals-says-iea-world-energy-outlook-2023" target="_blank">Nuclear Power Essential to Meeting Climate Goals - IAEA</a></h3>
+                    <p>The International Atomic Energy Agency (IAEA) highlights the role of nuclear power in meeting global climate targets as part of the 2023 World Energy Outlook.</p>
+                </div>
+                <div class="news-item">
+                    <h3><a href="https://www.world-nuclear-news.org/Articles/Global-nuclear-power-output-increases-in-2023" target="_blank">Global Nuclear Power Output Increases in 2023 - World Nuclear News</a></h3>
+                    <p>The World Nuclear Association reports an increase in global nuclear power output in 2023, emphasizing the importance of nuclear energy in sustainable development.</p>
+                </div>
+                <div class="news-item">
+                    <h3><a href="https://www.nei.org/news/2023/nuclear-power-in-the-energy-transition" target="_blank">Nuclear Power's Role in the Energy Transition - NEI</a></h3>
+                    <p>The Nuclear Energy Institute (NEI) discusses how nuclear power is crucial for a reliable and clean energy transition, especially in light of recent global events.</p>
+                </div>
             </div>
         </section>
 
         <section class="full-width-section">
             <h2>News Archive</h2>
             <ul class="news-archive-list">
-                <li><a href="#">Nuclear Energy in 2024: What to Expect</a></li>
-                <li><a href="#">Breakthroughs in Reactor Technology</a></li>
-                <li><a href="#">Global Impact of Nuclear Energy Policies</a></li>
+                <li><a href="https://www.iaea.org/newscenter/news/climate-change-and-nuclear-power-2023" target="_blank">Climate Change and Nuclear Power 2023 - IAEA</a></li>
+                <li><a href="https://www.world-nuclear-news.org/Articles/Nuclear-technology-advancements-in-2023" target="_blank">Nuclear Technology Advancements in 2023 - World Nuclear News</a></li>
+                <li><a href="https://www.nei.org/news/2023/global-impact-of-nuclear-energy-policies" target="_blank">Global Impact of Nuclear Energy Policies - NEI</a></li>
             </ul>
         </section>
     </main>
@@ -51,27 +62,6 @@
     <footer>
         <p>&copy; 2024 Fission Hub. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Function to fetch and display the latest news
-        function fetchNews() {
-            fetch('https://newsapi.org/v2/everything?q=nuclear+fission&apiKey=YOUR_NEWS_API_KEY')
-                .then(response => response.json())
-                .then(data => {
-                    let newsHtml = '';
-                    data.articles.forEach(article => {
-                        newsHtml += `<div class="news-item">
-                            <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
-                            <p>${article.description}</p>
-                        </div>`;
-                    });
-                    document.getElementById('news-container').innerHTML = newsHtml;
-                });
-        }
-
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', fetchNews);
-    </script>
 </body>
 
 </html>
