@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fission Hub - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav>
+            <div class="logo"><a href="index.html">Fission Hub</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Fission Hub</h1>
+            <p>Your gateway to the latest in fission energy research and resources.</p>
+            <div class="hero-search">
+                <input type="text" id="search-bar" placeholder="Search for fission energy resources...">
+                <button onclick="searchResources()">Search</button>
+            </div>
+        </div>
+        <div class="hero-graphic">
+            <!-- Add a modern, vector-style graphic -->
+            <img src="path-to-your-graphic.svg" alt="Fission Energy Graphic">
+        </div>
+    </section>
+
+    <main>
+        <section class="services">
+            <div class="service-box">
+                <h2>Latest News</h2>
+                <p>Stay updated with the latest developments in fission energy.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+            <div class="service-box">
+                <h2>Fission Technology</h2>
+                <p>Discover the key principles and advancements in nuclear fission technology.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+            <div class="service-box">
+                <h2>Research Facilities</h2>
+                <p>Explore our interactive map of global research facilities.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fission Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to search resources
+        function searchResources() {
+            let query = document.getElementById('search-bar').value;
+            window.location.href = `resources.html?q=${query}`;
+        }
+    </script>
+</body>
+
+</html>
