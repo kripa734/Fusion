@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         .hero {
-            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
             padding: 20px;
+            position: relative;
         }
 
         .hero-content {
@@ -17,12 +21,24 @@
         }
 
         .hero-graphic img {
-            position: absolute;
-            top: 0; /* Position at the top of the hero section */
-            right: 0; /* Align to the right */
-            width: 40%; /* Adjust the width to fit the space */
+            max-width: 35%; /* Adjust the percentage to control image size */
             height: auto;
-            margin: 60px; /* Adjust margin to move the image slightly inward */
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content, .hero-graphic img {
+                max-width: 100%;
+            }
+
+            .hero-graphic img {
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
