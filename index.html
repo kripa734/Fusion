@@ -8,36 +8,69 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
             position: relative;
+            padding: 20px;
+            min-height: 400px; /* Adjust height as needed */
+            background-color: #282d71; /* Optional: Ensures the background covers the whole hero section */
         }
 
         .hero-content {
-            max-width: 60%;
+            max-width: 50%;
+            padding-right: 20px; /* Adds space between text and image */
+            z-index: 1; /* Ensure text is on top */
+        }
+
+        .hero-graphic {
+            position: absolute;
+            top: 20px; /* Adjust top margin */
+            right: 20px; /* Adjust right margin */
+            width: 35%; /* Adjust width to fit your needs */
+            height: auto;
+            z-index: 0; /* Ensure image is behind text if overlapping */
         }
 
         .hero-graphic img {
-            max-width: 35%; /* Adjust the percentage to control image size */
+            width: 100%;
             height: auto;
         }
 
         /* Media query for smaller screens */
+        @media (max-width: 1200px) {
+            .hero-graphic {
+                width: 40%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-graphic {
+                width: 50%;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero {
                 flex-direction: column;
                 text-align: center;
+                min-height: auto;
             }
 
-            .hero-content, .hero-graphic img {
+            .hero-content {
                 max-width: 100%;
+                padding-right: 0;
             }
 
-            .hero-graphic img {
+            .hero-graphic {
+                position: relative;
+                width: 80%; /* Wider image on smaller screens */
                 margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-graphic {
+                width: 90%;
             }
         }
     </style>
@@ -68,7 +101,6 @@
             </div>
         </div>
         <div class="hero-graphic">
-            <!-- Add a modern, vector-style graphic -->
             <img src="FissionGrp.png" alt="Fission Energy Graphic">
         </div>
     </section>
