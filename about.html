@@ -4,8 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fission Hub - About</title>
+    <title>Fission Hub - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            position: relative;
+            flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+        }
+
+        .hero-content {
+            max-width: 50%; /* Adjust to control the text width */
+            flex: 1; /* Allows flexibility */
+        }
+
+        .hero-graphic {
+            max-width: 45%; /* Adjust to control the image width */
+            flex: 1; /* Allows flexibility */
+            text-align: right; /* Align the image to the right */
+        }
+
+        .hero-graphic img {
+            width: 100%; /* Image takes full width of its container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content, .hero-graphic {
+                max-width: 100%;
+            }
+
+            .hero-graphic img {
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -23,28 +65,52 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero about-hero">
-            <div class="hero-content">
-                <h1>About Us</h1>
-                <p>Fission Hub is dedicated to providing comprehensive and up-to-date information on nuclear fission technology, research, and developments.</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Fission Hub</h1>
+            <p>Your gateway to the latest in fission energy research and resources.</p>
+            <div class="hero-search">
+                <input type="text" id="search-bar" placeholder="Search for fission energy resources...">
+                <button onclick="searchResources()">Search</button>
             </div>
-        </section>
+        </div>
+        <div class="hero-graphic">
+            <!-- Add a modern, vector-style graphic -->
+            <img src="FissionGrp.png" alt="Fission Energy Graphic">
+        </div>
+    </section>
 
-        <section class="full-width-section">
-            <h2>Our Mission</h2>
-            <p>We strive to educate and inform the world about the potential and advancements in fission energy. By compiling resources, news, and research, we aim to be the go-to platform for anyone interested in nuclear energy.</p>
-        </section>
-
-        <section class="full-width-section">
-            <h2>Our Team</h2>
-            <p>Our team consists of experts and enthusiasts in the field of nuclear energy, committed to promoting sustainable energy solutions.</p>
+    <main>
+        <section class="services">
+            <div class="service-box">
+                <h2>Latest News</h2>
+                <p>Stay updated with the latest developments in fission energy.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+            <div class="service-box">
+                <h2>Fission Technology</h2>
+                <p>Discover the key principles and advancements in nuclear fission technology.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+            <div class="service-box">
+                <h2>Research Facilities</h2>
+                <p>Explore our interactive map of global research facilities.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Fission Hub. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Function to search resources
+        function searchResources() {
+            let query = document.getElementById('search-bar').value;
+            window.location.href = `resources.html?q=${query}`;
+        }
+    </script>
 </body>
 
 </html>
