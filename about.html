@@ -12,6 +12,7 @@
             padding: 20px;
             min-height: 300px; /* Adjust height as needed */
             background-color: #282d71; /* Optional: Ensures the background covers the whole hero section */
+            color: #ffffff;
         }
 
         .hero-content {
@@ -19,29 +20,16 @@
             padding-right: 20px; /* Adds space between text and image */
         }
 
-        .hero-graphic {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 40%; /* Adjust width to fit your needs */
-            height: auto;
-        }
-
-        .hero-graphic img {
-            width: 100%; /* Image takes full width of its container */
-            height: auto; /* Maintain aspect ratio */
-        }
-
         /* Media query for smaller screens */
         @media (max-width: 1200px) {
-            .hero-graphic {
-                width: 45%;
+            .hero-content {
+                max-width: 60%;
             }
         }
 
         @media (max-width: 992px) {
-            .hero-graphic {
-                width: 50%;
+            .hero-content {
+                max-width: 70%;
             }
         }
 
@@ -55,20 +43,6 @@
             .hero-content {
                 max-width: 100%;
                 padding-right: 0;
-            }
-
-            .hero-graphic {
-                position: relative;
-                width: 80%; /* Wider image on smaller screens */
-                margin-top: 20px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-graphic {
-                width: 90%;
             }
         }
     </style>
@@ -93,13 +67,12 @@
         <div class="hero-content">
             <h1>Welcome to Fusion Hub</h1>
             <p>Your gateway to the latest in fusion energy research and resources.</p>
+            <p><strong>Introduction:</strong> Fusion Hub is your comprehensive source for the latest developments in fusion energy. We aim to provide up-to-date information on world news, research, and resources in the rapidly evolving field of fusion energy, ensuring you stay informed about this critical area of clean energy innovation.</p>
+            <p><strong>Our Mission:</strong> At Fusion Hub, our mission is to educate, inform, and inspire a global audience by delivering high-quality content on fusion energy. We are dedicated to supporting the growth of fusion energy through accessible knowledge, fostering collaboration, and encouraging the adoption of this sustainable energy source.</p>
             <div class="hero-search">
                 <input type="text" id="search-bar" placeholder="Search for fusion energy resources...">
                 <button onclick="searchResources()">Search</button>
             </div>
-        </div>
-        <div class="hero-graphic">
-            <img src="FusionGrp.png" alt="Fusion Energy Graphic">
         </div>
     </section>
 
