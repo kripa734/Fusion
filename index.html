@@ -20,30 +20,16 @@
             z-index: 1; /* Ensure text is on top */
         }
 
-        .hero-graphic {
-            position: absolute;
-            top: 40px; /* Adjust top margin */
-            right: 40px; /* Adjust right margin */
-            width: 35%; /* Adjust width to fit your needs */
-            height: auto;
-            z-index: 0; /* Ensure image is behind text if overlapping */
-        }
-
-        .hero-graphic img {
-            width: 100%;
-            height: auto;
-        }
-
         /* Media query for smaller screens */
         @media (max-width: 1200px) {
-            .hero-graphic {
-                width: 40%;
+            .hero-content {
+                max-width: 60%;
             }
         }
 
         @media (max-width: 992px) {
-            .hero-graphic {
-                width: 50%;
+            .hero-content {
+                max-width: 70%;
             }
         }
 
@@ -57,20 +43,6 @@
             .hero-content {
                 max-width: 100%;
                 padding-right: 0;
-            }
-
-            .hero-graphic {
-                position: relative;
-                width: 80%; /* Wider image on smaller screens */
-                margin-top: 20px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-graphic {
-                width: 90%;
             }
         }
     </style>
@@ -99,9 +71,6 @@
                 <input type="text" id="search-bar" placeholder="Search for fusion energy resources...">
                 <button onclick="searchResources()">Search</button>
             </div>
-        </div>
-        <div class="hero-graphic">
-            <img src="FusionGrp.png" alt="Fusion Energy Graphic">
         </div>
     </section>
 
