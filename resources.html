@@ -4,14 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fission Hub - Resources</title>
+    <title>Fusion Hub - Resources</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #005f73;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .navbar nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar .logo a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .nav-links li {
+            margin-left: 20px;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            background-color: #0a9396;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background-color: #0a9396;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .full-width-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .full-width-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #0a9396;
+        }
+
+        .full-width-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .resources-list,
+        .news-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .resources-list li,
+        .news-list li {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .resources-list li a,
+        .news-list li a {
+            color: #005f73;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .resources-list li a:hover,
+        .news-list li a:hover {
+            color: #0a9396;
+        }
+
+        .footer {
+            background-color: #005f73;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <header class="navbar">
         <nav>
-            <div class="logo"><a href="index.html">Fission Hub</a></div>
+            <div class="logo"><a href="index.html">Fusion Hub</a></div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -25,45 +147,41 @@
 
     <main>
         <section class="hero resources-hero">
-            <div class="hero-content">
-                <h1>Fission Energy Resources</h1>
-                <p>Explore a curated list of academic papers, articles, videos, and interactive tools related to nuclear fission energy.</p>
-            </div>
+            <h1>Fusion Energy Resources</h1>
+            <p>Explore a curated list of academic papers, articles, videos, and interactive tools related to nuclear fusion energy.</p>
         </section>
 
         <section class="full-width-section">
-            <h2>Articles and Papers</h2>
-            <p>A collection of peer-reviewed papers and articles on the latest in fission energy research.</p>
+            <h2>Key Resources</h2>
+            <p>Discover the leading organizations and initiatives in fusion energy research and development. These resources provide comprehensive insights into ongoing projects, research breakthroughs, and collaboration opportunities.</p>
             <ul class="resources-list">
-                <li><a href="#">Understanding Nuclear Fission: An Overview</a></li>
-                <li><a href="#">Advancements in Nuclear Reactor Technologies</a></li>
-                <li><a href="#">Environmental Impact of Nuclear Energy</a></li>
+                <li><a href="https://fusionforenergy.europa.eu/" target="_blank">Fusion for Energy (F4E)</a> - The European Union’s organization managing Europe's contribution to ITER.</li>
+                <li><a href="https://www.gov.uk/government/organisations/uk-atomic-energy-authority" target="_blank">UK Atomic Energy Authority (UKAEA)</a> - Advancing fusion research in the UK.</li>
+                <li><a href="https://generalfusion.com/" target="_blank">General Fusion</a> - A leading company in commercial fusion technology development.</li>
+                <li><a href="https://www.psfc.mit.edu/" target="_blank">MIT Plasma Science and Fusion Center (PSFC)</a> - A hub for plasma research and fusion energy studies.</li>
+                <li><a href="https://www.ipp.mpg.de/en" target="_blank">Max Planck Institute for Plasma Physics (IPP)</a> - A major research institution focused on plasma physics and fusion.</li>
+                <li><a href="https://euro-fusion.org/" target="_blank">EUROfusion</a> - A European consortium of fusion research organizations.</li>
             </ul>
         </section>
 
         <section class="full-width-section">
-            <h2>Educational Videos</h2>
-            <p>Watch educational videos that explain the principles of fission energy in an easy-to-understand format.</p>
-            <ul class="resources-list">
-                <li><a href="#">Introduction to Nuclear Fission</a></li>
-                <li><a href="#">How Nuclear Power Plants Work</a></li>
-                <li><a href="#">The Future of Nuclear Energy</a></li>
-            </ul>
-        </section>
-
-        <section class="full-width-section">
-            <h2>Interactive Tools</h2>
-            <p>Use interactive simulators and tools to deepen your understanding of nuclear fission processes.</p>
-            <ul class="resources-list">
-                <li><a href="#">Nuclear Reactor Simulator</a></li>
-                <li><a href="#">Fission Chain Reaction Tool</a></li>
-                <li><a href="#">Nuclear Decay Calculator</a></li>
+            <h2>Latest News</h2>
+            <p>Stay informed with the most recent developments in the field of fusion energy. These sources offer news on international collaborations, technological breakthroughs, and policy advancements.</p>
+            <ul class="news-list">
+                <li><a href="https://www.ans.org/news/article-5594/kerry-shares-us-plan-for-international-fusion-energy-engagement-on-cop28-stage/" target="_blank">Kerry Shares US Plan for International Fusion Energy Engagement at COP28</a></li>
+                <li><a href="https://www.whitehouse.gov/ostp/news-updates/2023/12/02/international-partnerships-in-a-new-era-of-fusion-energy-development/" target="_blank">International Partnerships in a New Era of Fusion Energy Development - The White House</a></li>
+                <li><a href="https://fusionenergyinsights.com/blog/post/us-announces-new-international-fusion-plan-at-cop28" target="_blank">US Announces New International Fusion Plan at COP28 - Fusion Energy Insights</a></li>
+                <li><a href="https://science.osti.gov/fes/Community-Resources/Workshop-Reports/Fusion-Energy-Development-via-Public-Private-Partnerships" target="_blank">Fusion Energy Development via Public-Private Partnerships - DOE Office of Science</a></li>
+                <li><a href="https://www.nature.com/articles/d41586-022-04440-7" target="_blank">Fusion Energy Progress Report - Nature</a></li>
+                <li><a href="https://www.iaea.org/newscenter/pressreleases/iaea-and-iter-step-up-cooperation-in-nuclear-fusion" target="_blank">IAEA and ITER Step Up Cooperation in Nuclear Fusion - IAEA</a></li>
+                <li><a href="https://www.fusionindustryassociation.org/news/" target="_blank">Latest News on Fusion Industry Developments - Fusion Industry Association</a></li>
+                <li><a href="https://www.iaea.org/events/fec2023" target="_blank">Fusion Energy Conference 2023 - IAEA</a></li>
             </ul>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Fission Hub. All rights reserved.</p>
+    <footer class="footer">
+        <p>&copy; 2024 Fusion Hub. All rights reserved.</p>
     </footer>
 </body>
 
